@@ -1,0 +1,163 @@
+//COLORS
+$violet: #8643DC;
+$topaz: #25202F;
+$grape: #47444E;
+$mobster: #636066;
+$stormgray: #7E7F86;
+
+
+
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+
+$fontfamily:  'Comfortaa', cursive;
+
+$fontweight: (
+   bold: 700,
+   medium: 500,
+   regular: 400,
+);
+
+$fontsize: (
+   h1: 60px,
+   h2: 36px,
+   h3: 24px,
+   extratext: 20px,
+   textbig: 18px,
+   text: 16px,
+);
+
+$texttransform: (
+   none: none,
+   cap: capitalize,
+   upper: uppercase,
+);
+
+// Nixit for font style
+@mixin fontstyle($fw, $fs, $tt) {
+   @if map-has-key($fontweight, $fw) {
+      font-weight: #{map-get($fontweight, $fw)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fw}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($fontsize, $fs) {
+      font-size: #{map-get($fontsize, $fs)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fs}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($texttransform, $tt) {
+      text-transform: #{map-get($texttransform, $tt)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$tt}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+}
+
+// MEDIA
+$level_1: 1000px;
+$level_2: 900px;
+// $level_3: 1000px;
+// $level_4: 900px;
+// $level_5: 800px;
+// $level_6: 700px;
+$level_7: 600px;
+$level_8: 576px;
+
+// WIDTH
+$desktopwidth: 1110px;
+
+.container {
+   max-width: $desktopwidth;
+   margin: 0 auto;
+   padding: 0 15px;
+   width: 100%;
+   @media (max-width: $level_7) {
+      padding: 0 8px;
+   }
+}
+
+section,
+article,
+header,
+footer,
+aside {
+   display: block;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   font-family: $fontfamily;
+   min-width: $level_8;
+   min-height: 100vh;
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   flex-grow: 1;
+}
+
+.h1 {
+   @include fontstyle(bold, h1, cap);
+   line-height: 72px;
+   color: $topaz;
+}
+.h2 {
+   @include fontstyle(bold, h2, none);
+   line-height: 47px;
+   color: $topaz;
+}
+.h3 {
+   @include fontstyle(medium, h3, cap);
+   line-height: 32px;
+   color: $topaz;
+}
+.extratext {
+   @include fontstyle(regular, extratext, none);
+   line-height: 27px;
+   color: $stormgray;
+}
+.textbig {
+   @include fontstyle(regular, textbig, cap);
+   line-height: 23px;
+   color: $violet;
+}
+.text {
+   @include fontstyle(medium, text, none);
+   line-height: 32px;
+   color: $mobster;
+}
+
+.nav-active {
+   color: #000;
+   font-weight: 500;
+}
+
+.hr-h2 {
+   display: inline-block;
+   &::after {
+      position: relative;
+      bottom: 21px;
+      left: 0;
+      content: "";
+      display: block;
+      height: 10px;
+      background: rgba(73, 69, 255, 0.2);
+   }
+}
+.btn-1 {
+   background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+   border-radius: 10px;
+   padding: 17px 57px;
+   color: black;
+}
+
+// HOVER
+@media (min-width: 678px) {
+   //---------- Header
+}

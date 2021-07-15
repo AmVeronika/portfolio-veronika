@@ -1,0 +1,58 @@
+.header {
+   background: url(../img/header/bg.png) right top no-repeat;
+   &__top {
+      display: flex;
+      align-items: center;
+      margin-top: 60px;
+   }
+   &__nav {
+      margin-left: 60px;
+   }
+   &__nav button {
+      margin-left: 40px;
+   }
+   &__h3 {
+      font-weight: 700;
+      margin-top: 20px;
+      margin-bottom: 50px;
+   }
+   &__body {
+      margin-top: 125px;
+      min-height: 550px;
+      display: flex;
+      justify-content: space-between;
+   }
+   &__talk {
+      color: #fff;
+      padding: 20px 45px;
+      background: $violet;
+      border-radius: 100px;
+      font-weight: 500;
+   }
+   &__avatar {
+      position: relative;
+      width: 535px;
+      height: 755px;
+      overflow: hidden;
+      .bounce {
+         width: 535px;
+         height: 535px;
+         border-radius: 85% 22% 48% 59% / 49% 18% 85% 58%;
+         position: absolute;
+      }
+      .bounce1 {
+         background: #692fb4b0;
+      }
+      .bounce2 {
+         background: #b02fb4b0;
+         transform: rotate(-60deg);
+      }
+      &-img {
+         position: absolute;
+         z-index: 1;
+         width: 530px;
+         transform: translate(-50%);
+         left:60%;
+      }
+   }
+}
