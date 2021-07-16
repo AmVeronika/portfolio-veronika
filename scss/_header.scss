@@ -1,5 +1,7 @@
 .header {
-   background: url(../img/header/bg.png) right top no-repeat;
+   &__bg {
+      background: url(../img/header/bg.png) 109px no-repeat;
+   }
    &__top {
       display: flex;
       align-items: center;
@@ -33,7 +35,6 @@
       position: relative;
       width: 535px;
       height: 755px;
-      overflow: hidden;
       .bounce {
          width: 535px;
          height: 535px;

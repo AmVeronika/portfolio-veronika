@@ -13,26 +13,30 @@
 
 <body>
    <header class="header">
-      <div class="container">
+      <div class="container header__bg">
          <article class="header__top">
-            <svg class="header__logo" width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M0 20C0 8.95431 8.95431 0 20 0H40V20C40 31.0457 31.0457 40 20 40V40C8.95431 40 0 31.0457 0 20V20Z" fill="#8643DC"/>
-               <path d="M16 10C16 4.47715 20.4772 0 26 0H40V13C40 18.5228 35.5228 23 30 23H16V10Z" fill="#FF59C1"/>
+            <svg class="header__logo" width="50" height="50" viewBox="0 0 40 40" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M0 20C0 8.95431 8.95431 0 20 0H40V20C40 31.0457 31.0457 40 20 40V40C8.95431 40 0 31.0457 0 20V20Z"
+                  fill="#8643DC" />
+               <path d="M16 10C16 4.47715 20.4772 0 26 0H40V13C40 18.5228 35.5228 23 30 23H16V10Z" fill="#FF59C1" />
                <g filter="url(#filter0_d)">
-               <path d="M31.68 9L22.59 30H17.79L8.73 9H13.98L20.37 24L26.85 9H31.68Z" fill="white"/>
+                  <path d="M31.68 9L22.59 30H17.79L8.73 9H13.98L20.37 24L26.85 9H31.68Z" fill="white" />
                </g>
                <defs>
-               <filter id="filter0_d" x="4.72998" y="9" width="30.95" height="29" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-               <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-               <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
-               <feOffset dy="4"/>
-               <feGaussianBlur stdDeviation="2"/>
-               <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-               <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
-               <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
-               </filter>
+                  <filter id="filter0_d" x="4.72998" y="9" width="30.95" height="29" filterUnits="userSpaceOnUse"
+                     color-interpolation-filters="sRGB">
+                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                     <feOffset dy="4" />
+                     <feGaussianBlur stdDeviation="2" />
+                     <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                  </filter>
                </defs>
-               </svg>               
+            </svg>
             <nav class="header__nav">
                <button type="button" class="header__nav-item extratext nav-active">Обо мне</button>
                <button type="button" class="header__nav-item extratext">Мои работы</button>
@@ -47,14 +51,49 @@
                <a href="mailto:mihotinaw@gmail.com" class="header__talk extratext">Напиши мне</a>
             </div>
             <div class="header__avatar">
-               <img class="header__avatar-img" src="img/header/me.png" alt="">
+               <img class="header__avatar-img" src=# alt="">
                <div class="bounce bounce1"></div>
                <div class="bounce bounce2"></div>
             </div>
          </section>
       </div>
-
    </header>
+   <main class="main">
+      <section class="portfolio">
+         <div class="container">
+            <p class="textbig">Портфолио</p>
+            <div class="portfolio__link">
+               <h2 class="h2">Все Творческие Проекты</h2>
+               <button class="portfolio__button h3" type="button">Узнать Больше
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.5 20.8306L21 13.3306V12.2701L13.5 4.77008L12.4395 5.83058L18.6585 12.0511H3V13.5511H18.66L12.438 19.7701L13.4985 20.8306H13.5Z"
+                        fill="#8643DC" />
+                  </svg>
+               </button>
+            </div>
+
+            <article class="portfolio__projects">
+               <div class="portfolio__project">
+                  <div class="portfolio__img1">
+                     <img class="portfolio__scrin" src="img/portfolio/pr-shop-1.PNG" alt="">
+                  </div>
+                  <div class="portfolio__img2">
+                     <img class="portfolio__scrin" src="img/portfolio/pr-shop-2.PNG" alt="">
+                  </div>
+               </div>
+               <div class="portfolio__project portfolio__project-style">
+                  <div class="portfolio__img1">
+                     <img class="portfolio__scrin" src="img/portfolio/pr-templates-1.PNG" alt="">
+                  </div>
+                  <div class="portfolio__img2">
+                     <img class="portfolio__scrin" src="img/portfolio/pr-templates-2.PNG" alt="">
+                  </div>
+               </div>
+            </article>
+         </div>
+      </section>
+   </main>
    <main class="main"></main>
    <footer class="footer"></footer>
 </body>
