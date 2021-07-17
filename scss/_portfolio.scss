@@ -1,13 +1,27 @@
 .portfolio {
-   background: url(/img/portfolio/portfolio-bg.png);
-   padding-bottom: 50px;
+   background: linear-gradient(180deg, #fbf8ff1f 0%, #8421ff0f 25%, #7f1eff14 50%, #ba0ff214 75%, #f8f4fd1f 100%);
+   padding-bottom: 100px;
+
    &__link {
       display: flex;
       justify-content: space-between;
+      margin-top: 15px;
+   }
+   &__button {
+      position: relative;
+   }
+   &__button::before {
+      content: "";
+      position: absolute;
+      width: 205px;
+      height: 1px;
+      top: 60px;
+      background: #000;
    }
    &__projects {
       display: flex;
       justify-content: space-between;
+      margin-top: 50px;
    }
    &__project {
       width: 540px;
@@ -20,7 +34,7 @@
       border-radius: 10px;
       &-style {
          margin-left: 22px;
-         background: #DADCF5;
+         background: #dadcf5;
       }
    }
    &__img1 {
@@ -40,5 +54,17 @@
    &__scrin {
       max-width: 100%;
       max-height: 100%;
+   }
+}
+.block__textbig {
+   position: relative;
+   margin-bottom: 25px;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 71px;
+      height: 2px;
+      bottom: -10px;
+      background: $violet;
    }
 }

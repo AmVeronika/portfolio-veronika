@@ -1,7 +1,4 @@
 .header {
-   &__bg {
-      background: url(../img/header/bg.png) 109px no-repeat;
-   }
    &__top {
       display: flex;
       align-items: center;
@@ -34,26 +31,22 @@
    &__avatar {
       position: relative;
       width: 535px;
-      height: 755px;
-      .bounce {
-         width: 535px;
-         height: 535px;
-         border-radius: 85% 22% 48% 59% / 49% 18% 85% 58%;
+      &-bg {
+         z-index: -1;
          position: absolute;
+         top: -235px;
+         left: -376px;
       }
-      .bounce1 {
-         background: #692fb4b0;
-      }
-      .bounce2 {
-         background: #b02fb4b0;
-         transform: rotate(-60deg);
+      .bounce {
+         position: absolute;
+         top: -84px;
       }
       &-img {
          position: absolute;
          z-index: 1;
          width: 530px;
          transform: translate(-50%);
-         left:60%;
+         left: 60%;
       }
    }
 }
