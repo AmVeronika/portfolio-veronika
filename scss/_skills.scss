@@ -1,5 +1,14 @@
 .skills {
-   margin-bottom: 100px;
+   background: linear-gradient(
+      180deg,
+      #f7f3fd1f 0%,
+      #f6f9e70f 25%,
+      #ffe42914 50%,
+      #ff862f17 75%,
+      #ddd7ec1a 90%,
+      #f9f8e90a 100%
+   );
+   padding-bottom: 100px;
    &__wrapp {
       display: flex;
       justify-content: space-between;

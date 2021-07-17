@@ -123,7 +123,7 @@ body {
    color: $stormgray;
 }
 .textbig {
-   @include fontstyle(regular, textbig, cap);
+   @include fontstyle(regular, textbig, n);
    line-height: 23px;
    color: $violet;
 }

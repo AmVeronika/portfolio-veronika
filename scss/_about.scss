@@ -1,0 +1,52 @@
+.about {
+   background: linear-gradient(
+      180deg,
+      #f7f3fd1f 0%,
+      #f6f9e70f 25%,
+      #ffe42914 50%,
+      #ff862f17 75%,
+      #ddd7ec1a 90%,
+      #f9f8e90a 100%
+   );
+   padding-bottom: 100px;
+   &__wrapp {
+      position: relative;
+      padding: 67px 0 100px;
+
+      &-pic {
+         width: 90px;
+         height: 90px;
+         position: absolute;
+      }
+      .about1 {
+         top: 39px;
+         left: 110px;
+      }
+      .about2 {
+         top: 180px;
+         left: 10px;
+      }
+      .about3 {
+         top: 40px;
+         right: 110px;
+      }
+      .about4 {
+         top: 180px;
+         right: 10px;
+      }
+      .about5 {
+         bottom: -36px;
+         right: 50%;
+         transform: translateX(50%);
+      }
+      &-img {
+         width: 100%;
+      }
+      &-content {
+         text-align: center;
+         max-width: 610px;
+         line-height: 32px;
+         margin: 0 auto;
+      }
+   }
+}
