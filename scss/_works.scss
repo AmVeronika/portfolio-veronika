@@ -1,0 +1,36 @@
+.works {
+   padding-bottom: 145px;
+   &__wrapp {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 35px;
+   }
+   &__project {
+      display: flex;
+      flex-direction: column;
+      width: 500px;
+      min-height: 300px;
+      max-height: 540px;
+      margin: 15px 0;
+      padding: 15px;
+      &-code {
+         background: antiquewhite;
+         border-radius: 10px;
+         margin: 10px 0;
+         padding: 0 10px;
+      }
+   }
+   &__project-text {
+      justify-content: center;
+      overflow: hidden;
+   }
+   &__project-video {
+      width: 457px;
+      height: 540px;
+      margin: 0 auto;
+   }
+}
+.project-code-overflow {
+   overflow: auto;
+}

@@ -14,9 +14,10 @@
       padding: 67px 0 100px;
 
       &-pic {
-         width: 90px;
-         height: 90px;
+         width: 110px;
          position: absolute;
+         filter: blur(3px);
+         transition: 4s;
       }
       .about1 {
          top: 39px;

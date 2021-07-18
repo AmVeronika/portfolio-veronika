@@ -24,8 +24,6 @@
       margin-top: 50px;
    }
    &__project {
-      width: 540px;
-      height: 427px;
       display: flex;
       justify-content: space-between;
       position: relative;
@@ -36,6 +34,10 @@
          margin-left: 22px;
          background: #dadcf5;
       }
+   }
+   &__project-width {
+      height: 427px;
+      width: 540px;
    }
    &__img1 {
       width: 340px;

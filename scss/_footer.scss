@@ -1,0 +1,25 @@
+.contacts {
+   padding-bottom: 50px;
+   &-h2 {
+      display: block;
+      text-align: center;
+   }
+   &__wrapp {
+      max-width: 230px;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+      padding-top: 40px;
+      margin: 0 auto;
+      &-link {
+         width: 62px;
+         height: 62px;
+         background: url(/img/footer/polygon.png) center no-repeat;
+      }
+      &-ikon {
+         margin-top: 51%;
+         transform: translateY(-51%);
+         transition: fill 0.2s;
+      }
+   }
+}

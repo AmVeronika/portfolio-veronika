@@ -1,16 +1,14 @@
 //COLORS
-$violet: #8643DC;
-$topaz: #25202F;
-$grape: #47444E;
+$violet: #8643dc;
+$topaz: #25202f;
+$grape: #47444e;
 $mobster: #636066;
-$stormgray: #7E7F86;
-
-
+$stormgray: #7e7f86;
 
 // FONTS
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap");
 
-$fontfamily:  'Comfortaa', cursive;
+$fontfamily: "Comfortaa", cursive;
 
 $fontweight: (
    bold: 700,
@@ -133,11 +131,6 @@ body {
    color: $mobster;
 }
 
-.nav-active {
-   color: #000;
-   font-weight: 500;
-}
-
 .hr-h2 {
    display: inline-block;
    &::after {
@@ -160,4 +153,51 @@ body {
 // HOVER
 @media (min-width: 678px) {
    //---------- Header
+}
+.nav-active {
+   color: #000;
+   font-weight: 500;
+}
+.header__nav-item:hover {
+   color: #000;
+   font-weight: 500;
+}
+.header__talk:hover {
+   color: #25202f;
+   background: #fc46b2;
+}
+.about__wrapp-pic:hover {
+   transition: 0.2s;
+   filter: none;
+}
+.contacts-h2:active {
+   color: #fc46b2;
+}
+.contacts-h2:active .contacts__arrow {
+   fill: #ffdff3;
+}
+.contacts-h2:hover .contacts__arrow-left {
+   animation: arrow1 0.6s linear infinite;
+}
+.contacts-h2:hover .contacts__arrow-right {
+   animation: arrow2 0.6s linear infinite;
+}
+@keyframes arrow1 {
+   from {
+      transform: translateX(-3px);
+   }
+   to {
+      transform: translateX(1px);
+   }
+}
+@keyframes arrow2 {
+   from {
+      transform: translateX(3px);
+   }
+   to {
+      transform: translateX(-1px);
+   }
+}
+.contacts__wrapp-link:hover .contacts__wrapp-ikon {
+   fill: #000;
 }
