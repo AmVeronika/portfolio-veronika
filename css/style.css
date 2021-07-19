@@ -549,20 +549,25 @@ body {
   padding-bottom: 100px;
 }
 
+.skills__block {
+  width: 1100px;
+  padding: 35px 0;
+  overflow: hidden;
+}
+
 .skills__wrapp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: block;
+  width: 4000px;
   margin-top: 50px;
 }
 
 .skills__wrapp-item {
+  display: inline-block;
   width: 170px;
   height: 170px;
   text-align: center;
+  margin: 0 5px;
+  padding: 5px;
 }
 
 .skills__wrapp-item-1 {

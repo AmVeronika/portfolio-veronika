@@ -9,10 +9,10 @@ class SkillsItem { //Отрисовка Скила в контейнере
    }
    renderSkillItem() {
       return `
-                  <div class="skills__wrapp-item skills__wrapp-item-${this.effect}">
-                     <img class="skills__wrapp-img" src="img/skill/skill-${this.id}.svg" alt="">
-                     <h4 class="textbig skills__wrapp-textbig">${this.name}</h4>
-                  </div>`
+               <div class="skills__wrapp-item skills__wrapp-item-${this.effect}">
+                  <img class="skills__wrapp-img" src="img/skill/skill-${this.id}.svg" alt="">
+                  <h4 class="textbig skills__wrapp-textbig">${this.name}</h4>
+               </div>`
    }
 }
 class SkillsWrapp { 
@@ -94,14 +94,16 @@ listSkillsItem.renderSkillsWrapp(); //Запуск метода по созда�
 //---------------------------------------------------------------------------
 //----------------------АТОМАТИЧЕСКИЙ СЛАЙДЕР СКИЛОВ-------------------------
 //---------------------------------------------------------------------------
-// let leftSliderSkill = 0;
-// let timerSliderSkill;
-
-// autoSlider();
-
-// function autoSlider () {
-//    timerSliderSkill = setTimeout(function (
-//    ), 1000);
-// }
-
-
+let left = 0;
+let timer;
+function autoSliderSkills () {
+   timer = setTimeout (()=> {
+      let skillsWrapp = document.getElementById('skills__wrapp');
+      left = left - 128;
+      if (left < -512) {
+         left = 0;
+      }
+      skillsWrapp.style.left = left + 'px';
+      autoSliderSkills();
+   }, 1000); 
+}
