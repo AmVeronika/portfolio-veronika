@@ -15,16 +15,6 @@ closeMenu.addEventListener("click", () => {
    dropMenu.style.display = "none";
 });
 
-filter.addEventListener("click", () => {
-   // if (dropFilter.classList.contains("openFilter")) {
-   //    dropFilter.classList.remove("openFilter");
-   // } else {
-   //    dropFilter.classList.add("openFilter");
-   // }
-   dropFilter.classList.toggle("openfilter");
-   shadow.classList.toggle("activefilter");
-   filter.classList.toggle("filterActive")
-});
 
 
 

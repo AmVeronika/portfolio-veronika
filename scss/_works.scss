@@ -1,4 +1,14 @@
 .works {
+   background: linear-gradient(
+      180deg,
+      #f7f3fd21 0%,
+      #a3df8f2e 7%,
+      #f6f9e72e 25%,
+      #29ffeb1c 50%,
+      #ff862f17 75%,
+      #ddd7ec69 90%,
+      #f9f8e90a 100%
+   );
    padding-bottom: 145px;
    &__wrapp {
       display: flex;

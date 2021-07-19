@@ -133,51 +133,8 @@
             <p class="block__textbig textbig">Навыки</p>
             <h2 class="h2">Что-то умеем </h2>
             <article class="skills__wrapp">
-               <div class="skills__wrapp-item skills__wrapp-item-1">
-                  <img class="skills__wrapp-img" src="img/skill/html-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">HTML</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-2">
-                  <img class="skills__wrapp-img" src="img/skill/css-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">CSS</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-3">
-                  <img class="skills__wrapp-img" src="img/skill/js-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">Java Script</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-4">
-                  <img class="skills__wrapp-img" src="img/skill/sass-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">SASS</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-5">
-                  <img class="skills__wrapp-img" src="img/skill/git-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">GIT</h4>
-               </div>
-               <!-- <div class="skills__wrapp-item skills__wrapp-item-1">
-                  <img class="skills__wrapp-img" src="img/skill/vue-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">VUE</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-2">
-                  <img class="skills__wrapp-img" src="img/skill/gulp-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">GULP</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-3">
-                  <img class="skills__wrapp-img" src="img/skill/bootstrap-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">BOOTSTRAP</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-4">
-                  <img class="skills__wrapp-img" src="img/skill/figma-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">FIGMA</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-5">
-                  <img class="skills__wrapp-img" src="img/skill/avocode-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">AVOCODE</h4>
-               </div>
-               <div class="skills__wrapp-item skills__wrapp-item-1">
-                  <img class="skills__wrapp-img" src="img/skill/photoshop-skill.svg" alt="">
-                  <h4 class="textbig skills__wrapp-textbig">PHOTOSHOP</h4>
-               </div> -->
-            </article>
+         </div>
+         </article>
          </div>
       </section>
       <!-- Works -->
@@ -208,7 +165,7 @@ document.getElementsByClassName('quote-corrected');
 
 function quotesOriginal() {
    let a;
-   for (let i = 0; i < quoteOriginal.length; i++) {
+   for (let i = 0; i &lsaquo; quoteOriginal.length; i++) {
       let regexp = /\B'|'\B/g;
       a = quoteOriginal[i].innerText.replace(regexp, '"');
       quoteCorrected[i].innerText = a;
@@ -424,8 +381,8 @@ const app = new Vue({
       <div class="container">
          <p class="block__textbig textbig">Мои контакты</p>
          <a href="mailto:mihotinaw@gmail.com" class="contacts-h2 h2">
-            <svg class="contacts__arrow contacts__arrow-left" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px"
-               viewBox="0 0 612.02 612.02">
+            <svg class="contacts__arrow contacts__arrow-left" xmlns="http://www.w3.org/2000/svg" width="25px"
+               height="25px" viewBox="0 0 612.02 612.02">
                <path d="M596.96,269.674L342.381,15.094c-20.079-20.079-52.644-20.079-72.723,0c-20.079,20.079-20.079,52.644,0,72.723
         L487.852,306.01L269.658,524.202c-20.079,20.079-20.079,52.644,0,72.723s52.644,20.079,72.723,0L596.96,342.346
         C617.039,322.317,617.039,289.753,596.96,269.674z M290.858,254.258L88.744,41.238c-20.309-21.378-53.204-21.378-73.513,0
@@ -433,13 +390,14 @@ const app = new Vue({
         L290.858,331.72C311.167,310.342,311.167,275.662,290.858,254.258z" />
             </svg>
             Напиши мне
-            <svg class="contacts__arrow contacts__arrow-right" xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" viewBox="0 0 612.02 612.02">
+            <svg class="contacts__arrow contacts__arrow-right" xmlns="http://www.w3.org/2000/svg" width="25px"
+               height="25px" viewBox="0 0 612.02 612.02">
                <path d="M124.172,305.975L342.365,87.781c20.079-20.079,20.079-52.644,0-72.722c-20.079-20.079-52.644-20.079-72.723,0
                   L15.062,269.639c-20.079,20.079-20.079,52.644,0,72.723l254.58,254.58c20.079,20.078,52.644,20.078,72.723,0
                   c20.079-20.079,20.079-52.644,0-72.723L124.172,305.975z M431.395,305.694l165.371-165.982c20.308-20.359,20.308-53.408,0-73.768
                   c-20.309-20.359-53.204-20.359-73.513,0L321.139,268.823c-20.309,20.359-17.047,35.266,3.032,55.345L523.253,545.47
-                  c20.309,20.359,53.204,20.359,73.513,0c20.308-20.359,20.308-53.408,0-73.768L431.395,305.694z"/>
-      </svg></a>
+                  c20.309,20.359,53.204,20.359,73.513,0c20.308-20.359,20.308-53.408,0-73.768L431.395,305.694z" />
+            </svg></a>
          <article class="contacts__wrapp">
             <a class="contacts__wrapp-link" href="https://t.me/am_veronika" target="_blank">
                <svg class="contacts__wrapp-ikon" fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -458,14 +416,14 @@ const app = new Vue({
                target="_blank">
                <svg class="contacts__wrapp-ikon" fill="#fff" xmlns="http://www.w3.org/2000/svg" width="30px"
                   height="30px" viewBox="0 0 169.063 169.063">
-                     <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
+                  <path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752
 		c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407
 		c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752
 		c17.455,0,31.656,14.201,31.656,31.655V122.407z" />
-                     <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
+                  <path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561
 		C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561
 		c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z" />
-                     <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
+                  <path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78
 		c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78
 		C135.661,29.421,132.821,28.251,129.921,28.251z" />
                </svg>
@@ -473,5 +431,7 @@ const app = new Vue({
          </article>
       </div>
    </footer>
+   <script src="js/script.js"></script>
 </body>
+
 </html>

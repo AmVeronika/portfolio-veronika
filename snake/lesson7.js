@@ -15,6 +15,7 @@ function init() {
    var wrap = document.querySelector('.wrap');
    // Подгоняем размер контейнера под игровое поле
    wrap.style.width = '400px';
+   wrap.style.height = '400px';
    // События кнопок Старт и Новая игра
    document.getElementById('snake-start').addEventListener('click', startGame);
    document.getElementById('snake-renew').addEventListener('click', refreshGame);
