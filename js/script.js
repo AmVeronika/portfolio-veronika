@@ -15,7 +15,7 @@ class SkillsItem { //Отрисовка Скила в контейнере
                </div>`
    }
 }
-class SkillsWrapp { 
+class SkillsWrapp {
    constructor() { //Массив объектов (скилов)
       this.itemsSkill = [
          {
@@ -94,18 +94,55 @@ listSkillsItem.renderSkillsWrapp(); //Запуск метода по созда�
 // ---------------------------------------------------------------------------
 // ----------------------АТОМАТИЧЕСКИЙ СЛАЙДЕР СКИЛОВ-------------------------
 // ---------------------------------------------------------------------------
-let left = 0;
-let timer;
+// let left = 0;
+// let timer;
 // autoSliderSkills();
-function autoSliderSkills () {
-   timer = setTimeout (()=> {
-      let skillsWrapp = document.getElementById('skills__wrapp');
-      left = left - 186;
-      console.log(left)
-      if (left < -1116) {
-         left = 0;
+// function autoSliderSkills () {
+//    timer = setInterval (()=> {
+//       let skillsWrapp = document.getElementById('skills__wrapp');
+//       left = left - 186;
+//       console.log(left)
+//       if (left < -1116) {
+//          left = 0;
+//       }
+//       skillsWrapp.style.left = left + 'px';
+//    }, 3000); 
+// }
+
+let left = 0;
+let skillsWrapp = document.getElementById("skills__wrapp");
+let skills = document.getElementById("skills");
+
+if (skills.addEventListener) {
+   if ('onwheel' in document) {
+      // IE9+, FF17+
+      skills.addEventListener("wheel", onWheel);
+   } else if ('onmousewheel' in document) {
+      // устаревший вариант события
+      skills.addEventListener("mousewheel", onWheel);
+   } else {
+      // Firefox < 17
+      skills.addEventListener("MozMousePixelScroll", onWheel);
+   }
+} else { // IE8-
+   skills.attachEvent("onmousewheel", onWheel);
+}
+// Это решение предусматривает поддержку IE8-
+function onWheel(e) {
+   e.preventDefault();
+   if (e.deltaY >= 100) {
+      if (left <= -1116) {
+         left = -930;
       }
+      left = left - 186;
       skillsWrapp.style.left = left + 'px';
-      autoSliderSkills();
-   }, 2000); 
+   } else if (e.deltaY <= -100) {
+      console.log(left);
+      if (left >= 0) {
+         console.log(left);
+         left = -185;
+      }
+      left = left + 186;
+      skillsWrapp.style.left = left + 'px';
+   }
 }

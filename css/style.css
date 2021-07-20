@@ -551,8 +551,7 @@ body {
 
 .skills__block {
   width: 1113px;
-  height: 288px;
-  margin-top: 32px;
+  height: 343px;
   padding: 35px 0;
   overflow: hidden;
 }
@@ -563,8 +562,8 @@ body {
   margin-top: 50px;
   position: relative;
   left: 0;
-  -webkit-animation: all ease 2s;
-          animation: all ease 2s;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 .skills__wrapp-item {
@@ -582,10 +581,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 80px rgba(247, 212, 223, 0.7);
-          box-shadow: 0 0 80px rgba(247, 212, 223, 0.7);
-  -webkit-animation: light 4s forwards ease-out infinite;
-          animation: light 4s forwards ease-out infinite;
 }
 
 .skills__wrapp-item-2 {
@@ -594,10 +589,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 80px rgba(221, 255, 236, 0.7);
-          box-shadow: 0 0 80px rgba(221, 255, 236, 0.7);
-  -webkit-animation: light 4s forwards ease-out 0.5s infinite;
-          animation: light 4s forwards ease-out 0.5s infinite;
 }
 
 .skills__wrapp-item-3 {
@@ -606,10 +597,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 80px rgba(215, 241, 253, 0.7);
-          box-shadow: 0 0 80px rgba(215, 241, 253, 0.7);
-  -webkit-animation: light 4s forwards ease-out 1s infinite;
-          animation: light 4s forwards ease-out 1s infinite;
 }
 
 .skills__wrapp-item-4 {
@@ -618,10 +605,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
-          box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
-  -webkit-animation: light 4s forwards ease-out 1.5s infinite;
-          animation: light 4s forwards ease-out 1.5s infinite;
 }
 
 .skills__wrapp-item-5 {
@@ -630,10 +613,6 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 10px;
-  -webkit-box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
-          box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
-  -webkit-animation: light 4s forwards ease-out 2s infinite;
-          animation: light 4s forwards ease-out 2s infinite;
 }
 
 @-webkit-keyframes light {

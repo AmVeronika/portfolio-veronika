@@ -15,9 +15,6 @@ closeMenu.addEventListener("click", () => {
    dropMenu.style.display = "none";
 });
 
-
-
-
 // закрытие модального окна при нажатии на ESC
 window.onkeydown = (evt) => {
    if (evt.keyCode == 27) {
