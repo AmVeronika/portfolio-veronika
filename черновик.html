@@ -43,60 +43,75 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <style>
-    #container {
-      width: 200px;
-      height: 200px;
-      border: 1px solid black;
-      background: #0FF;
-      overflow: auto;
-    }
-  </style>
+   <meta charset="utf-8">
+   <style>
+      .slider {
+         border-radius: 5px;
+         background: #E0E0E0;
+         background: linear-gradient(left top, #E0E0E0, #EEEEEE);
+         width: 310px;
+         height: 15px;
+         margin: 5px;
+      }
+
+      .thumb {
+         width: 10px;
+         height: 25px;
+         border-radius: 3px;
+         position: relative;
+         left: 10px;
+         top: -5px;
+         background: blue;
+         cursor: pointer;
+      }
+   </style>
 </head>
 
 <body>
 
-  Прокрутка: <span id="delta">0</span>
-  <div id="container">
-    Прокрути надо мной.
-  </div>
+   <div id="slider" class="slider">
+      <div class="thumb"></div>
+   </div>
 
-  <script>
-    var elem = document.getElementById('container');
+   <script>
+      let thumb = slider.querySelector('.thumb');
 
-    if (elem.addEventListener) {
-      if ('onwheel' in document) {
-        // IE9+, FF17+
-        elem.addEventListener("wheel", onWheel);
-      } else if ('onmousewheel' in document) {
-        // устаревший вариант события
-        elem.addEventListener("mousewheel", onWheel);
-      } else {
-        // Firefox < 17
-        elem.addEventListener("MozMousePixelScroll", onWheel);
-      }
-    } else { // IE8-
-      elem.attachEvent("onmousewheel", onWheel);
-    }
+      thumb.onmousedown = function (event) {
+         event.preventDefault(); // предотвратить запуск выделения (действие браузера)
 
+         let shiftX = event.clientX - thumb.getBoundingClientRect().left;
+         // shiftY здесь не нужен, слайдер двигается только по горизонтали
 
-    // Это решение предусматривает поддержку IE8-
-    function onWheel(e) {
-      e = e || window.event;
+         document.addEventListener('mousemove', onMouseMove);
+         document.addEventListener('mouseup', onMouseUp);
 
-      // deltaY, detail содержат пиксели
-      // wheelDelta не дает возможность узнать количество пикселей
-      // onwheel || MozMousePixelScroll || onmousewheel
-      var delta = e.deltaY || e.detail || e.wheelDelta;
+         function onMouseMove(event) {
+            let newLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
 
-      var info = document.getElementById('delta');
+            // курсор вышел из слайдера => оставить бегунок в его границах.
+            if (newLeft < 0) {
+               newLeft = 0;
+            }
+            let rightEdge = slider.offsetWidth - thumb.offsetWidth;
+            if (newLeft > rightEdge) {
+               newLeft = rightEdge;
+            }
 
-      info.innerHTML = +info.innerHTML + delta;
+            thumb.style.left = newLeft + 'px';
+         }
 
-      e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-    }
-  </script>
+         function onMouseUp() {
+            document.removeEventListener('mouseup', onMouseUp);
+            document.removeEventListener('mousemove', onMouseMove);
+         }
+
+      };
+
+      thumb.ondragstart = function () {
+         return false;
+      };
+
+   </script>
 </body>
 
 </html>

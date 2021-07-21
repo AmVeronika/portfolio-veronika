@@ -550,7 +550,7 @@ body {
 }
 
 .skills__block {
-  width: 1113px;
+  width: 1110px;
   height: 343px;
   padding: 35px 0;
   overflow: hidden;
@@ -558,12 +558,13 @@ body {
 
 .skills__wrapp {
   display: block;
-  width: 4000px;
+  width: 2230px;
   margin-top: 50px;
   position: relative;
   left: 0;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
+  cursor: pointer;
 }
 
 .skills__wrapp-item {

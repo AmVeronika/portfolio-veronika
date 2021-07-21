@@ -92,57 +92,81 @@ class SkillsWrapp {
 const listSkillsItem = new SkillsWrapp(); // Присвоивание класса константе 
 listSkillsItem.renderSkillsWrapp(); //Запуск метода по созданию элементов 
 // ---------------------------------------------------------------------------
-// ----------------------АТОМАТИЧЕСКИЙ СЛАЙДЕР СКИЛОВ-------------------------
+// -------------(1)---------СКРОЛЛ СЛАЙДЕР СКИЛОВ-----------------------------
 // ---------------------------------------------------------------------------
+
+
 // let left = 0;
-// let timer;
-// autoSliderSkills();
-// function autoSliderSkills () {
-//    timer = setInterval (()=> {
-//       let skillsWrapp = document.getElementById('skills__wrapp');
-//       left = left - 186;
-//       console.log(left)
-//       if (left < -1116) {
-//          left = 0;
-//       }
-//       skillsWrapp.style.left = left + 'px';
-//    }, 3000); 
+// let skillsWrapp = document.getElementById("skills__wrapp");
+// let skills = document.getElementById("skills");
+
+// if (skills.addEventListener) {
+//    if ('onwheel' in document) {
+//       // IE9+, FF17+
+//       skills.addEventListener("wheel", onWheel);
+//    } else if ('onmousewheel' in document) {
+//       // устаревший вариант события
+//       skills.addEventListener("mousewheel", onWheel);
+//    } else {
+//       // Firefox < 17
+//       skills.addEventListener("MozMousePixelScroll", onWheel);
+//    }
+// } else { // IE8-
+//    skills.attachEvent("onmousewheel", onWheel);
 // }
+// // Это решение предусматривает поддержку IE8-
+// function onWheel(e) {
+//    e.preventDefault();
+//    if (e.deltaY >= 100) {
+//       if (left <= -1116) {
+//          left = -930;
+//       }
+//       left = left - 186;
+//       skillsWrapp.style.left = left + 'px';
+//    } else if (e.deltaY <= -100) {
+//       if (left >= 0) {
+//          left = -185;
+//       }
+//       left = left + 186;
+//       skillsWrapp.style.left = left + 'px';
+//    }
+// }
+// ---------------------------------------------------------------------------
+// -------------(2)-----ЗАЖАТИЕ МЫШИ СЛАЙДЕР СКИЛОВ---------------------------
+// ---------------------------------------------------------------------------
 
-let left = 0;
-let skillsWrapp = document.getElementById("skills__wrapp");
-let skills = document.getElementById("skills");
+let skillsBlock = document.querySelector(".skills__block");
+let skillsWrapp = skillsBlock.querySelector(".skills__wrapp");
+let skillsItem = document.querySelector('.skills__wrapp-item');
+let left;
+skillsWrapp.onmousedown = function (event) {
+   event.preventDefault(); // предотвратить запуск выделения (действие браузера)
+   let shiftX = event.clientX - skillsWrapp.getBoundingClientRect().left;
+   console.log(shiftX);//Значение х в блоке врапп
+   document.addEventListener('mousemove', onMouseMove);
+   document.addEventListener('mouseup', onMouseUp);
 
-if (skills.addEventListener) {
-   if ('onwheel' in document) {
-      // IE9+, FF17+
-      skills.addEventListener("wheel", onWheel);
-   } else if ('onmousewheel' in document) {
-      // устаревший вариант события
-      skills.addEventListener("mousewheel", onWheel);
-   } else {
-      // Firefox < 17
-      skills.addEventListener("MozMousePixelScroll", onWheel);
+   function onMouseMove(event) {
+      let newLeft = event.clientX - shiftX - skillsBlock.getBoundingClientRect().left;
+      let rightEdge = skillsBlock.offsetWidth - skillsWrapp.offsetWidth;
+      // курсор вышел из слайдера => оставить бегунок в его границах.
+      console.log(newLeft + ' влево');
+      console.log(rightEdge + ' вправо');
+      if (newLeft > 0) {
+         newLeft = 0;
+      }
+      if (newLeft < rightEdge) {
+         newLeft = -1113;
+      }
+      skillsWrapp.style.left = newLeft + 'px';
    }
-} else { // IE8-
-   skills.attachEvent("onmousewheel", onWheel);
-}
-// Это решение предусматривает поддержку IE8-
-function onWheel(e) {
-   e.preventDefault();
-   if (e.deltaY >= 100) {
-      if (left <= -1116) {
-         left = -930;
-      }
-      left = left - 186;
-      skillsWrapp.style.left = left + 'px';
-   } else if (e.deltaY <= -100) {
-      console.log(left);
-      if (left >= 0) {
-         console.log(left);
-         left = -185;
-      }
-      left = left + 186;
-      skillsWrapp.style.left = left + 'px';
+
+   function onMouseUp() {
+      document.removeEventListener('mouseup', onMouseUp);
+      document.removeEventListener('mousemove', onMouseMove);
    }
 }
+skillsWrapp.ondragstart = function () {
+   return false;
+};
+// ---------------------------------------------------------------------------
