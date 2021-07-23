@@ -19,29 +19,26 @@
          filter: blur(3px);
          transition: 4s;
       }
-      .about1 {
+      .about0 {
          top: 39px;
          left: 110px;
       }
-      .about2 {
+      .about1 {
          top: 180px;
          left: 10px;
       }
-      .about3 {
+      .about2 {
          top: 40px;
          right: 110px;
       }
-      .about4 {
+      .about3 {
          top: 180px;
          right: 10px;
       }
-      .about5 {
+      .about4 {
          bottom: -36px;
          right: 50%;
          transform: translateX(50%);
-      }
-      &-img {
-         width: 100%;
       }
       &-content {
          text-align: center;
