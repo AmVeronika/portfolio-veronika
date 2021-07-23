@@ -407,35 +407,31 @@ body {
   transition: 4s;
 }
 
-.about__wrapp .about1 {
+.about__wrapp .about0 {
   top: 39px;
   left: 110px;
 }
 
-.about__wrapp .about2 {
+.about__wrapp .about1 {
   top: 180px;
   left: 10px;
 }
 
-.about__wrapp .about3 {
+.about__wrapp .about2 {
   top: 40px;
   right: 110px;
 }
 
-.about__wrapp .about4 {
+.about__wrapp .about3 {
   top: 180px;
   right: 10px;
 }
 
-.about__wrapp .about5 {
+.about__wrapp .about4 {
   bottom: -36px;
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
-}
-
-.about__wrapp-img {
-  width: 100%;
 }
 
 .about__wrapp-content {

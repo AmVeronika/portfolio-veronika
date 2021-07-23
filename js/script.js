@@ -1,5 +1,47 @@
 //---------------------------------------------------------------------------
-//----------------------ОTРИСОВКА СКИЛОВ В БЛОКЕ НАВЫКИ-----------------------
+//----------------------ВЫВОД ХОББИ В БЛОКЕ ОБО МНЕ--------------------------
+//---------------------------------------------------------------------------
+let arrRandom = [0];
+setInterval(() => {
+   let aboutImg = document.getElementsByClassName('about__wrapp-img');
+   let numRandomImg = Math.floor(Math.random() * 24);//рандомный номер для картинки (от 0 до 23)
+   let numRandom = Math.floor(Math.random() * aboutImg.length);//рандомный номер для блока с картинкой (от 0 до 5)
+   arrRandom.unshift(numRandomImg)
+
+   let imgRandom = aboutImg[numRandom].src.split('-')[length].split('.')[0];//рандомный номер существующей картинки
+
+   // if () {
+   //    if (numRandomImg != imgRandom) { //Если существующая картинка не равна будущей картинке (в блоке, который подвергнется изменению)
+   //       aboutImg[numRandom].src = `img/about/about-img-${numRandomImg}.png`;
+   //       // console.log(arrRandom);
+   //    }
+   // }
+   // console.log(numRandom + ' номер блока');
+   // console.log(numRandomImg + ' Номер картинки будущей');
+   // console.log(numRandom + ' - блок, ' + imgRandom + ' номер картинки на данный момент');
+
+
+   // for (let item of arrRandom) {
+      if (aboutImg[numRandom].dataset.num != arrRandom[1]) {
+         aboutImg[numRandom].src = `img/about/about-img-${numRandomImg}.png`;
+         aboutImg[numRandom].setAttribute("data-num",numRandomImg);
+      } else {
+         
+      }
+      arrRandom.pop();
+   // }
+
+   //    console.log(img.src);
+   // console.log(aboutImg[numRandom].src);
+
+
+
+
+}, 2500);
+
+
+//---------------------------------------------------------------------------
+//----------------------ОTРИСОВКА СКИЛОВ В БЛОКЕ НАВЫКИ----------------------
 //---------------------------------------------------------------------------
 class SkillsItem { //Отрисовка Скила в контейнере
    constructor(id, effect, name) {
@@ -95,7 +137,6 @@ listSkillsItem.renderSkillsWrapp(); //Запуск метода по созда�
 // -------------(1)---------СКРОЛЛ СЛАЙДЕР СКИЛОВ-----------------------------
 // ---------------------------------------------------------------------------
 
-
 // let left = 0;
 // let skillsWrapp = document.getElementById("skills__wrapp");
 // let skills = document.getElementById("skills");
@@ -141,8 +182,7 @@ let skillsItem = document.querySelector('.skills__wrapp-item');
 let left;
 skillsWrapp.onmousedown = function (event) {
    event.preventDefault(); // предотвратить запуск выделения (действие браузера)
-   let shiftX = event.clientX - skillsWrapp.getBoundingClientRect().left;
-   console.log(shiftX);//Значение х в блоке врапп
+   let shiftX = event.clientX - skillsWrapp.getBoundingClientRect().left;//Значение х в блоке врапп
    document.addEventListener('mousemove', onMouseMove);
    document.addEventListener('mouseup', onMouseUp);
 
