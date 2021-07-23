@@ -150,8 +150,6 @@ skillsWrapp.onmousedown = function (event) {
       let newLeft = event.clientX - shiftX - skillsBlock.getBoundingClientRect().left;
       let rightEdge = skillsBlock.offsetWidth - skillsWrapp.offsetWidth;
       // курсор вышел из слайдера => оставить бегунок в его границах.
-      console.log(newLeft + ' влево');
-      console.log(rightEdge + ' вправо');
       if (newLeft > 0) {
          newLeft = 0;
       }
