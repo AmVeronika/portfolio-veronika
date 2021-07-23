@@ -1,48 +1,27 @@
 //---------------------------------------------------------------------------
 //----------------------ВЫВОД ХОББИ В БЛОКЕ ОБО МНЕ--------------------------
 //---------------------------------------------------------------------------
-let arrRandom = [0];
+
+let arrBlock = [10];//Массив блоков
 setInterval(() => {
    let aboutImg = document.getElementsByClassName('about__wrapp-img');
-   let numRandomImg = Math.floor(Math.random() * 24);//рандомный номер для картинки (от 0 до 23)
-   let numRandom = Math.floor(Math.random() * aboutImg.length);//рандомный номер для блока с картинкой (от 0 до 5)
-   arrRandom.unshift(numRandomImg)
-
-   let imgRandom = aboutImg[numRandom].src.split('-')[length].split('.')[0];//рандомный номер существующей картинки
-
-   // if () {
-   //    if (numRandomImg != imgRandom) { //Если существующая картинка не равна будущей картинке (в блоке, который подвергнется изменению)
-   //       aboutImg[numRandom].src = `img/about/about-img-${numRandomImg}.png`;
-   //       // console.log(arrRandom);
-   //    }
-   // }
-   // console.log(numRandom + ' номер блока');
-   // console.log(numRandomImg + ' Номер картинки будущей');
-   // console.log(numRandom + ' - блок, ' + imgRandom + ' номер картинки на данный момент');
-
-
-   // for (let item of arrRandom) {
-      if (aboutImg[numRandom].dataset.num != arrRandom[1]) {
-         aboutImg[numRandom].src = `img/about/about-img-${numRandomImg}.png`;
-         aboutImg[numRandom].setAttribute("data-num",numRandomImg);
-      } else {
-         
-      }
-      arrRandom.pop();
-   // }
-
-   //    console.log(img.src);
-   // console.log(aboutImg[numRandom].src);
-
-
-
-
-}, 2500);
-
+   let numRandomImg = Math.floor(Math.random() * 5);//Номер будущего блока
+   let numRandom = Math.floor(Math.random() * 24);
+   let imgExist = [];//Массив из src карточек, которые отображены 
+   arrBlock.unshift(numRandomImg);
+   for (let img of aboutImg) {
+      imgExist.push(img.src.split('-')[length].split('.')[0]);
+   }
+   if (!imgExist.includes(numRandom.toString()) && arrBlock != numRandomImg) {//Проверка на существование картинки, которую предлагает рандом
+      aboutImg[numRandomImg].src = `img/about/about-img-${numRandom}.png`;
+   }
+   arrBlock.pop();
+}, 4500);
 
 //---------------------------------------------------------------------------
 //----------------------ОTРИСОВКА СКИЛОВ В БЛОКЕ НАВЫКИ----------------------
 //---------------------------------------------------------------------------
+
 class SkillsItem { //Отрисовка Скила в контейнере
    constructor(id, effect, name) {
       this.id = id;

@@ -13,7 +13,7 @@
    &__h3 {
       font-weight: 700;
       margin-top: 20px;
-      margin-bottom: 50px;
+      margin-bottom: 100px;
    }
    &__body {
       margin-top: 125px;
@@ -40,7 +40,10 @@
       }
       .bounce {
          position: absolute;
-         top: -84px;
+         top: -120px;
+         left: -85px;
+         width: 600px;
+         filter: drop-shadow(0 0 20px rgba(75, 0, 130, 0.5));
       }
       &-img {
          position: absolute;
