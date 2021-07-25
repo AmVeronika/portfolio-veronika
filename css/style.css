@@ -141,6 +141,7 @@ body {
   font-family: "Comfortaa", cursive;
   min-width: 576px;
   min-height: 100vh;
+  cursor: url(../img/cursor.svg), auto;
 }
 
 .main {
@@ -554,6 +555,17 @@ body {
   height: 343px;
   padding: 35px 0;
   overflow: hidden;
+  position: relative;
+}
+
+.skills__block-gif {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  left: 45%;
+  bottom: 30%;
+  width: 142px;
+  opacity: 0.1;
 }
 
 .skills__wrapp {
@@ -564,7 +576,13 @@ body {
   left: 0;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.skills__wrapp:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .skills__wrapp-item {

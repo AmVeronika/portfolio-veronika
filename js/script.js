@@ -16,12 +16,10 @@ setInterval(() => {
       aboutImg[numRandomImg].src = `img/about/about-img-${numRandom}.png`;
    }
    arrBlock.pop();
-}, 4500);
-
+}, 3500);
 //---------------------------------------------------------------------------
 //----------------------ОTРИСОВКА СКИЛОВ В БЛОКЕ НАВЫКИ----------------------
 //---------------------------------------------------------------------------
-
 class SkillsItem { //Отрисовка Скила в контейнере
    constructor(id, effect, name) {
       this.id = id;
@@ -154,7 +152,6 @@ listSkillsItem.renderSkillsWrapp(); //Запуск метода по созда�
 // ---------------------------------------------------------------------------
 // -------------(2)-----ЗАЖАТИЕ МЫШИ СЛАЙДЕР СКИЛОВ---------------------------
 // ---------------------------------------------------------------------------
-
 let skillsBlock = document.querySelector(".skills__block");
 let skillsWrapp = skillsBlock.querySelector(".skills__wrapp");
 let skillsItem = document.querySelector('.skills__wrapp-item');
@@ -187,3 +184,18 @@ skillsWrapp.ondragstart = function () {
    return false;
 };
 // ---------------------------------------------------------------------------
+// --------------Подсказка (движение мышки) передвигать скилы-----------------
+// ---------------------------------------------------------------------------
+let skillsGif = document.querySelector('.skills__block-gif'); // Gif анимация, подсказка
+skillsGif.ondragstart = function () {
+   return false;
+};
+window.onscroll = () => {
+   let scrollPageSkill = window.pageYOffset;
+   if (scrollPageSkill >= 1750 && scrollPageSkill <= 2000) {
+      skillsGif.style.display = "block";
+      setTimeout(() => {
+         skillsGif.style.display = "none";
+      }, 3000)
+   } 
+}

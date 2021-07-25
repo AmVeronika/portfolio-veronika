@@ -91,6 +91,7 @@ body {
    font-family: $fontfamily;
    min-width: $level_8;
    min-height: 100vh;
+   cursor: url(../img/cursor.svg), auto;
 }
 
 .main {
@@ -201,3 +202,4 @@ body {
 .contacts__wrapp-link:hover .contacts__wrapp-ikon {
    fill: #000;
 }
+

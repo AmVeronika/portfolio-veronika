@@ -1376,6 +1376,7 @@ body {
   max-width: 652px;
   row-gap: 40px;
   max-height: 60vh;
+  overflow: auto;
   padding-right: 15px;
   margin-top: 15px;
 }
@@ -1383,8 +1384,8 @@ body {
 .shopping__card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 2fr 1fr;
-      grid-template-columns: 25% 2fr 1fr;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
   -ms-grid-rows: 222px;
       grid-template-rows: 222px;
   -webkit-column-gap: 15px;
@@ -1749,6 +1750,29 @@ body {
 .trans2 {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
+}
+
+.par-value {
+  line-height: 22px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.par-cart {
+  display: block;
+  border: 1px solid black;
+  width: 23px;
+  height: 23px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.icon-cart {
+  font-size: 27px;
+}
+
+.icon-cart:hover {
+  color: #e5122e93;
 }
 
 @media (min-width: 800px) {
