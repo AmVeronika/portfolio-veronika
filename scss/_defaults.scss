@@ -54,14 +54,14 @@ $texttransform: (
 }
 
 // MEDIA
-$level_1: 1360px;
+$level_1: 1380px;
 $level_2: 1260px;
-// $level_3: 1000px;
-// $level_4: 900px;
+$level_3: 1125px;
+$level_4: 960px;
 // $level_5: 800px;
 // $level_6: 700px;
 $level_7: 600px;
-$level_8: 576px;
+$level_8: 375px;
 
 // WIDTH
 $desktopwidth: 1110px;
@@ -152,9 +152,6 @@ body {
 }
 
 // HOVER
-@media (min-width: 678px) {
-   //---------- Header
-}
 .nav-active {
    color: #000;
    font-weight: 500;
@@ -204,36 +201,3 @@ body {
 }
 
 
-@media(max-width: $level_1) {
-   .header {
-      &__avatar-bg {
-         width: 1000px;
-         left: -400px;
-      }
-   }
-   .portfolio {
-      &__project-width {
-         width: 437px;
-         height: 427px;
-      }
-      &__project-style {
-         margin-left: 0;
-      }
-      &__img1 {
-         width: 283px;
-         height: 100%;
-      }
-      &__img2 {
-         width: 209px;
-         height: 426px;
-         left: 222px;
-      }
-   }
-   .skills {
-      &__block {
-         width: 933px;
-         margin: 0 auto;
-      }
-   }
-
-}

@@ -38,13 +38,6 @@
          top: -235px;
          left: -376px;
       }
-      .bounce {
-         position: absolute;
-         top: -120px;
-         left: -85px;
-         width: 600px;
-         filter: drop-shadow(0 0 20px rgba(75, 0, 130, 0.5));
-      }
       &-img {
          position: absolute;
          z-index: 1;
@@ -54,3 +47,10 @@
       }
    }
 }
+.bounce {
+      position: absolute;
+      top: -120px;
+      left: -85px;
+      width: 600px;
+      filter: drop-shadow(0 0 20px rgba(75, 0, 130, 0.5));
+   }
