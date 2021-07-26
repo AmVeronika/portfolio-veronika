@@ -54,8 +54,8 @@ $texttransform: (
 }
 
 // MEDIA
-$level_1: 1000px;
-$level_2: 900px;
+$level_1: 1360px;
+$level_2: 1260px;
 // $level_3: 1000px;
 // $level_4: 900px;
 // $level_5: 800px;
@@ -203,3 +203,37 @@ body {
    fill: #000;
 }
 
+
+@media(max-width: $level_1) {
+   .header {
+      &__avatar-bg {
+         width: 1000px;
+         left: -400px;
+      }
+   }
+   .portfolio {
+      &__project-width {
+         width: 437px;
+         height: 427px;
+      }
+      &__project-style {
+         margin-left: 0;
+      }
+      &__img1 {
+         width: 283px;
+         height: 100%;
+      }
+      &__img2 {
+         width: 209px;
+         height: 426px;
+         left: 222px;
+      }
+   }
+   .skills {
+      &__block {
+         width: 933px;
+         margin: 0 auto;
+      }
+   }
+
+}

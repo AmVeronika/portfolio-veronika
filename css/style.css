@@ -317,6 +317,33 @@ body {
   fill: #000;
 }
 
+@media (max-width: 1360px) {
+  .header__avatar-bg {
+    width: 1000px;
+    left: -400px;
+  }
+  .portfolio__project-width {
+    width: 437px;
+    height: 427px;
+  }
+  .portfolio__project-style {
+    margin-left: 0;
+  }
+  .portfolio__img1 {
+    width: 283px;
+    height: 100%;
+  }
+  .portfolio__img2 {
+    width: 209px;
+    height: 426px;
+    left: 222px;
+  }
+  .skills__block {
+    width: 933px;
+    margin: 0 auto;
+  }
+}
+
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
