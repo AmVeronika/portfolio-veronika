@@ -12,7 +12,8 @@ setInterval(() => {
    for (let img of aboutImg) {
       imgExist.push(img.src.split('-')[length].split('.')[0]);
    }
-   if (!imgExist.includes(numRandom.toString()) && arrBlock != numRandomImg) {//Проверка на существование картинки, которую предлагает рандом
+   if (!imgExist.includes(numRandom.toString()) && !arrBlock.includes(numRandomImg.toString())) {//Проверка на существование картинки, которую предлагает рандом
+
       aboutImg[numRandomImg].src = `img/about/about-img-${numRandom}.png`;
    }
    arrBlock.pop();
