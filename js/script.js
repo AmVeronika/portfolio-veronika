@@ -1,37 +1,77 @@
 //---------------------------------------------------------------------------
 //----------------------ВЫВОД ХОББИ В БЛОКЕ ОБО МНЕ--------------------------
 //---------------------------------------------------------------------------
-class AbautImgsSection {
-   
-}
-const aboutImgsOnPage = [0, 22, 15, 3, 8];
-const totalAboutImgs = 22;
-let aboutImgs = '';
-let abouImgsBlock = document.querySelector('.about__wrapp-pics');
-let previousIndex;//
-aboutImgsOnPage.forEach((img, indx) => {
-   aboutImgs += `<img class="about__wrapp-pic about__wrapp-img about${indx}" src="img/about/about-img-${img}.png" alt="">`;
-})
-abouImgsBlock.insertAdjacentHTML('beforeend', aboutImgs);
-setInterval(() => {
-   let randomIndex;
-   let randomNumberSrcImg;
-   for (; ;) {
-      randomIndex = getRandomNumber(aboutImgsOnPage.length);//Номер блока рандомный (получили индекс)
-      randomNumberSrcImg = getRandomNumber(totalAboutImgs);//Номер ссылки на картинку
-      if (!aboutImgsOnPage.includes(randomNumberSrcImg) && previousIndex != randomIndex) {//Проверка наличия ссылки на странице
-         break
-      }
+class AboutImgsSection {
+   constructor() {
+      this.aboutImgsOnPage = [0, 22, 15, 3, 8];
+      this.totalAboutImgs = 23;//Количество картинок
+      this.aboutImgs = '';
+      this.abouImgsBlock = document.querySelector('.about__wrapp-pics');
+      this.previousIndex;//Предыдущий индекс
    }
-   previousIndex = randomIndex;//Перезаписывание индекса на новый
-   let aboutImgOnChange = document.querySelector(`.about${randomIndex}`);//На замену блок фотки
-   aboutImgsOnPage[randomIndex] = randomNumberSrcImg;
-   aboutImgOnChange.src = `img/about/about-img-${randomNumberSrcImg}.png`;//Добавление новой картинки 
-}, 1000);
+   render() {//Вывод первых 5ти картинок
+      this.aboutImgsOnPage.forEach((img, indx) => {
+         this.aboutImgs += `<img class="about__wrapp-pic about__wrapp-img about${indx}" src="img/about/about-img-${img}.png" alt="">`;
+      })
+      this.abouImgsBlock.insertAdjacentHTML('beforeend', this.aboutImgs);
+   }
+   changeImgs() {
+      setInterval(() => {
+         let randomIndex;
+         let randomNumberSrcImg;
+         for (; ;) {
+            randomIndex = this.getRandomNumber(this.aboutImgsOnPage.length);//Номер блока рандомный (получили индекс)
+            randomNumberSrcImg = this.getRandomNumber(this.totalAboutImgs);//Номер ссылки на картинку
+            if (!this.aboutImgsOnPage.includes(randomNumberSrcImg) && this.previousIndex != randomIndex) {//Проверка наличия ссылки на странице
+               break
+            }
+         }
+         this.previousIndex = randomIndex;//Перезаписывание индекса на новый
+         let aboutImgOnChange = document.querySelector(`.about${randomIndex}`);//На замену блок фотки
+         this.aboutImgsOnPage[randomIndex] = randomNumberSrcImg;
+         aboutImgOnChange.src = `img/about/about-img-${randomNumberSrcImg}.png`;//Добавление новой картинки 
+      }, 2500);
+   }
 
-function getRandomNumber(num) {//Рандомное число
-   return +Math.floor(Math.random() * num);
+   getRandomNumber(num) {//Рандомное число
+      return +Math.floor(Math.random() * num);
+   }
 }
+const aboutImgsSection = new AboutImgsSection;
+aboutImgsSection.render();
+aboutImgsSection.changeImgs();
+
+
+
+// const aboutImgsOnPage = [0, 22, 15, 3, 8];
+// const totalAboutImgs = 23;//Количество картинок
+// let aboutImgs = '';
+// let abouImgsBlock = document.querySelector('.about__wrapp-pics');
+// let previousIndex;//Предыдущий индекс
+
+// aboutImgsOnPage.forEach((img, indx) => {
+//    aboutImgs += `<img class="about__wrapp-pic about__wrapp-img about${indx}" src="img/about/about-img-${img}.png" alt="">`;
+// })
+// abouImgsBlock.insertAdjacentHTML('beforeend', aboutImgs);
+// setInterval(() => {
+//    let randomIndex;
+//    let randomNumberSrcImg;
+//    for (; ;) {
+//       randomIndex = getRandomNumber(aboutImgsOnPage.length);//Номер блока рандомный (получили индекс)
+//       randomNumberSrcImg = getRandomNumber(totalAboutImgs);//Номер ссылки на картинку
+//       if (!aboutImgsOnPage.includes(randomNumberSrcImg) && previousIndex != randomIndex) {//Проверка наличия ссылки на странице
+//          break
+//       }
+//    }
+//    previousIndex = randomIndex;//Перезаписывание индекса на новый
+//    let aboutImgOnChange = document.querySelector(`.about${randomIndex}`);//На замену блок фотки
+//    aboutImgsOnPage[randomIndex] = randomNumberSrcImg;
+//    aboutImgOnChange.src = `img/about/about-img-${randomNumberSrcImg}.png`;//Добавление новой картинки 
+// }, 1000);
+
+// function getRandomNumber(num) {//Рандомное число
+//    return +Math.floor(Math.random() * num);
+// }
 
 
 //---------------------------------------------------------------------------
