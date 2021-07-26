@@ -1,23 +1,39 @@
 //---------------------------------------------------------------------------
 //----------------------ВЫВОД ХОББИ В БЛОКЕ ОБО МНЕ--------------------------
 //---------------------------------------------------------------------------
-
-let arrBlock = [10];//Массив блоков
+class AbautImgsSection {
+   
+}
+const aboutImgsOnPage = [0, 22, 15, 3, 8];
+const totalAboutImgs = 22;
+let aboutImgs = '';
+let abouImgsBlock = document.querySelector('.about__wrapp-pics');
+let previousIndex;//
+aboutImgsOnPage.forEach((img, indx) => {
+   aboutImgs += `<img class="about__wrapp-pic about__wrapp-img about${indx}" src="img/about/about-img-${img}.png" alt="">`;
+})
+abouImgsBlock.insertAdjacentHTML('beforeend', aboutImgs);
 setInterval(() => {
-   let aboutImg = document.getElementsByClassName('about__wrapp-img');
-   let numRandomImg = Math.floor(Math.random() * 5);//Номер будущего блока
-   let numRandom = Math.floor(Math.random() * 24);
-   let imgExist = [];//Массив из src карточек, которые отображены 
-   arrBlock.unshift(numRandomImg);
-   for (let img of aboutImg) {
-      imgExist.push(img.src.split('-')[length].split('.')[0]);
+   let randomIndex;
+   let randomNumberSrcImg;
+   for (; ;) {
+      randomIndex = getRandomNumber(aboutImgsOnPage.length);//Номер блока рандомный (получили индекс)
+      randomNumberSrcImg = getRandomNumber(totalAboutImgs);//Номер ссылки на картинку
+      if (!aboutImgsOnPage.includes(randomNumberSrcImg) && previousIndex != randomIndex) {//Проверка наличия ссылки на странице
+         break
+      }
    }
-   if (!imgExist.includes(numRandom.toString()) && !arrBlock.includes(numRandomImg.toString())) {//Проверка на существование картинки, которую предлагает рандом
+   previousIndex = randomIndex;//Перезаписывание индекса на новый
+   let aboutImgOnChange = document.querySelector(`.about${randomIndex}`);//На замену блок фотки
+   aboutImgsOnPage[randomIndex] = randomNumberSrcImg;
+   aboutImgOnChange.src = `img/about/about-img-${randomNumberSrcImg}.png`;//Добавление новой картинки 
+}, 1000);
 
-      aboutImg[numRandomImg].src = `img/about/about-img-${numRandom}.png`;
-   }
-   arrBlock.pop();
-}, 3500);
+function getRandomNumber(num) {//Рандомное число
+   return +Math.floor(Math.random() * num);
+}
+
+
 //---------------------------------------------------------------------------
 //----------------------ОTРИСОВКА СКИЛОВ В БЛОКЕ НАВЫКИ----------------------
 //---------------------------------------------------------------------------
@@ -198,5 +214,5 @@ window.onscroll = () => {
       setTimeout(() => {
          skillsGif.style.display = "none";
       }, 3000)
-   } 
+   }
 }
