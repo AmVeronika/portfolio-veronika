@@ -95,6 +95,7 @@
    }
    .works__wrapp {
       justify-content: center;
+      column-gap: 15px;
    }
    .project-code-margin {
       margin: 0 auto;
@@ -215,6 +216,14 @@
    .about__wrapp .about2 {
       display: none;
    }
+   .works {
+      &__project-code {
+         font-size: 10px;
+      }
+   }
+   .works__project-code-snake {
+      height: 165px;
+   }
 }
 @media (max-width: $level_6) {
    .header {
@@ -241,6 +250,7 @@
    .header {
       &__logo {
          margin-left: 20px;
+         width: 100px;
       }
       &__nav {
          margin-right: 10px;
@@ -280,14 +290,6 @@
    }
    .portfolio__img2 {
       left: 210px;
-   }
-   .works {
-      &__project-code {
-         font-size: 13px;
-      }
-      &__project-code-snake {
-         height: 358px;
-      }
    }
 }
 @media (max-width: $level_7) {

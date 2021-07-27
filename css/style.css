@@ -752,6 +752,10 @@ body {
   padding: 0 10px;
 }
 
+.works__project-code-snake {
+  height: 425px;
+}
+
 .works__project-text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -896,6 +900,8 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
   }
   .project-code-margin {
     margin: 0 auto;
@@ -1028,6 +1034,12 @@ body {
   .about__wrapp .about2 {
     display: none;
   }
+  .works__project-code {
+    font-size: 10px;
+  }
+  .works__project-code-snake {
+    height: 165px;
+  }
 }
 
 @media (max-width: 730px) {
@@ -1051,6 +1063,7 @@ body {
 @media (max-width: 580px) {
   .header__logo {
     margin-left: 20px;
+    width: 100px;
   }
   .header__nav {
     margin-right: 10px;
@@ -1085,12 +1098,6 @@ body {
   }
   .portfolio__img2 {
     left: 210px;
-  }
-  .works__project-code {
-    font-size: 13px;
-  }
-  .works__project-code-snake {
-    height: 358px;
   }
 }
 
