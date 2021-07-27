@@ -59,9 +59,10 @@ $level_2: 1260px;
 $level_3: 1125px;
 $level_4: 960px;
 $level_5: 850px;
-// $level_6: 700px;
-$level_7: 600px;
-$level_8: 375px;
+$level_6: 730px;
+$level_7: 580px;
+$level_8: 450px;
+$level_9: 375px;
 
 // WIDTH
 $desktopwidth: 1110px;
@@ -89,7 +90,7 @@ body {
    flex-direction: column;
    justify-content: space-between;
    font-family: $fontfamily;
-   min-width: $level_8;
+   min-width: $level_9;
    min-height: 100vh;
    cursor: url(../img/cursor.svg), auto;
 }

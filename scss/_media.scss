@@ -112,21 +112,21 @@
       right: 0;
       top: -106px;
    }
-   .about0 {
+   .about__wrapp .about0 {
       bottom: -36px;
-      left: 180px;
+      left: 60px;
    }
-   .about1 {
+   .about__wrapp .about1 {
+      top: 265px;
+      left: 88px;
+   }
+   .about__wrapp .about2 {
       top: 35px;
-      left: 50px;
+      right: 60px;
    }
-   .about2 {
-      top: 35px;
-      right: 37px;
-   }
-   .about3 {
-      bottom: -36px;
-      left: 180px;
+   .about__wrapp .about3 {
+      top: 265px;
+      right: 88px;
    }
    .skills__block {
       min-height: 343px;
@@ -145,12 +145,26 @@
    .portfolio__projects {
       flex-direction: column;
       align-items: center;
+      row-gap: 25px;
    }
 }
 @media (max-width: $level_5) {
    .header {
       &__top {
          margin-top: 30px;
+      }
+      &__nav {
+         display: flex;
+         justify-content: flex-end;
+         flex-wrap: wrap;
+         margin-right: 37px;
+         &-item {
+            margin-left: 35px;
+            line-height: 40px;
+         }
+      }
+      &__logo {
+         margin-left: 37px;
       }
       &__body {
          margin-top: 55px;
@@ -181,5 +195,130 @@
    .bounce {
       width: 100%;
       position: static;
+   }
+   .about__wrapp .about0 {
+      display: none;
+   }
+   .about__wrapp .about2 {
+      display: none;
+   }
+}
+@media (max-width: $level_6) {
+   .header {
+      &__h3 {
+         margin-top: 40px;
+         margin-bottom: 65px;
+      }
+      &__avatar-bg {
+         width: 538px;
+         left: 25px;
+         top: 328px;
+      }
+   }
+   .about {
+      &__wrapp {
+         padding-top: 40px;
+         &-content {
+            max-width: 520px;
+         }
+      }
+   }
+}
+@media (max-width: $level_7) {
+   .header {
+      &__logo {
+         margin-left: 20px;
+      }
+      &__nav {
+         margin-right: 10px;
+         &-item {
+            line-height: 34px;
+         }
+      }
+      &__avatar-bg {
+         width: 413px;
+         top: 433px;
+      }
+   }
+   .about {
+      &__wrapp {
+         &-test {
+            padding: 0 10px;
+         }
+      }
+   }
+   .about__wrapp-pic {
+      width: 86px;
+   }
+   .about__wrapp .about1 {
+      top: 290px;
+      left: 38px;
+   }
+   .about__wrapp .about3 {
+      top: 290px;
+      right: 38px;
+   }
+   .portfolio__project {
+      width: 400px;
+   }
+   .portfolio__img1 {
+      width: 245px;
+      top: 57px;
+   }
+   .portfolio__img2 {
+      left: 210px;
+   }
+   .works {
+      &__project-code {
+         font-size: 13px;
+      }
+      &__project-code-snake {
+         height: 358px;
+      }
+   }
+}
+@media (max-width: $level_7) {
+   .header {
+      &__h1 {
+         font-size: 44px;
+         line-height: 58px;
+      }
+      &__avatar {
+         width: 323px;
+
+         &-bg {
+            width: 358px;
+            top: 401px;
+            left: 13px;
+         }
+      }
+   }
+   .about__wrapp .about1 {
+      top: 330px;
+   }
+   .about__wrapp .about3 {
+      top: 330px;
+   }
+   .portfolio {
+      &__project {
+         width: 345px;
+
+         &-width {
+            height: 330px;
+         }
+      }
+      &__img1 {
+         width: 220px;
+      }
+      &__img2 {
+         top: 0;
+         left: 173px;
+         width: 160px;
+         height: 100%;
+      }
+      &__scrin {
+         height: 100%;
+         
+      }
    }
 }

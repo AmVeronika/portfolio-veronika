@@ -41,8 +41,6 @@ const aboutImgsSection = new AboutImgsSection;
 aboutImgsSection.render();
 aboutImgsSection.changeImgs();
 
-
-
 // const aboutImgsOnPage = [0, 22, 15, 3, 8];
 // const totalAboutImgs = 23;//Количество картинок
 // let aboutImgs = '';

@@ -48,40 +48,40 @@
             border: 1px solid #ffe7f0;
             box-sizing: border-box;
             border-radius: 10px;
-            // box-shadow: 0 0 80px rgba(247, 212, 223, 0.7);
-            // animation: light 4s forwards ease-out infinite;
+            box-shadow: 0 0 80px rgba(247, 212, 223, 0.7);
+            animation: light 4s forwards ease-out infinite;
          }
          &-2 {
             background: #edfff5;
             border: 1px solid #caffe1;
             box-sizing: border-box;
             border-radius: 10px;
-            // box-shadow: 0 0 80px rgba(221, 255, 236, 0.7);
-            // animation: light 4s forwards ease-out 0.5s infinite;
+            box-shadow: 0 0 80px rgba(221, 255, 236, 0.7);
+            animation: light 4s forwards ease-out 0.5s infinite;
          }
          &-3 {
             background: #f5fcff;
             border: 1px solid #ddf5ff;
             box-sizing: border-box;
             border-radius: 10px;
-            // box-shadow: 0 0 80px rgba(215, 241, 253, 0.7);
-            // animation: light 4s forwards ease-out 1s infinite;
+            box-shadow: 0 0 80px rgba(215, 241, 253, 0.7);
+            animation: light 4s forwards ease-out 1s infinite;
          }
          &-4 {
             background: #fffbf2;
             border: 1px solid #ffeec9;
             box-sizing: border-box;
             border-radius: 10px;
-            // box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
-            // animation: light 4s forwards ease-out 1.5s infinite;
+            box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
+            animation: light 4s forwards ease-out 1.5s infinite;
          }
          &-5 {
             background: #f4ffed;
             border: 1px solid #dbffc4;
             box-sizing: border-box;
             border-radius: 10px;
-            // box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
-            // animation: light 4s forwards ease-out 2s infinite;
+            box-shadow: 0 0 80px rgba(251, 237, 204, 0.7);
+            animation: light 4s forwards ease-out 2s infinite;
          }
       }
       @keyframes light {
