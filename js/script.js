@@ -254,3 +254,19 @@ window.onscroll = () => {
       }, 3000)
    }
 }
+// ---------------------------------------------------------------------------
+// ---------------Замена одинарных кавычек на двойные-------------------------
+// ---------------------------------------------------------------------------
+
+let quoteOriginal =
+   document.querySelector('.quote-original');
+let quoteCorrected =
+   document.querySelector('.quote-corrected');
+
+
+quoteOriginal.oninput = () => {
+   let regexp = /\B'|'\B/g;
+   console.log(quoteOriginal.value)
+   quoteCorrected.innerText = quoteOriginal.value.replace(regexp, '"');
+}
+

@@ -67,6 +67,12 @@ $level_9: 375px;
 // WIDTH
 $desktopwidth: 1110px;
 
+html{
+   scroll-behavior: smooth;
+}
+
+
+
 .container {
    max-width: $desktopwidth;
    margin: 0 auto;

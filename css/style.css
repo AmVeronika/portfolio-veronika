@@ -106,6 +106,10 @@ h6 {
 }
 
 /*--------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1110px;
   margin: 0 auto;
@@ -331,7 +335,7 @@ body {
   margin-left: 60px;
 }
 
-.header__nav button {
+.header__nav-item {
   margin-left: 40px;
 }
 
@@ -771,6 +775,16 @@ body {
 
 .project-code-overflow {
   overflow: auto;
+}
+
+.project-code-textarea {
+  resize: none;
+  padding: 20px;
+  height: 116px;
+}
+
+.quote-corrected {
+  font-size: 27px;
 }
 
 .contacts {
