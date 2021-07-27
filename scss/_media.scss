@@ -104,6 +104,18 @@
       padding-top: 50px;
    }
 }
+@media (hover: none) and (pointer: coarse) {
+   .skills__block-gif {
+      display: none !important;
+   }
+   .skills__wrapp {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+   }
+}
 @media (max-width: $level_4) {
    .header {
       &__avatar {
@@ -142,16 +154,7 @@
       min-height: 343px;
       width: 100%;
    }
-   .skills__block-gif {
-      display: none !important;
-   }
-   .skills__wrapp {
-      display: flex;
-      width: 100%;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-   }
+  
    .portfolio {
       padding-bottom: 65px;
       &__projects {
