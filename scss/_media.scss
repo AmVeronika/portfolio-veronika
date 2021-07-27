@@ -48,6 +48,9 @@
       &__top {
          justify-content: space-between;
       }
+      &__body {
+         min-height: 460px;
+      }
       &__logo {
          width: 70px;
          height: 70px;
@@ -87,11 +90,17 @@
          left: 227px;
       }
    }
+   .works {
+      padding-bottom: 65px;
+   }
    .works__wrapp {
       justify-content: center;
    }
    .project-code-margin {
       margin: 0 auto;
+   }
+   .contacts-h2 {
+      padding-top: 50px;
    }
 }
 @media (max-width: $level_4) {
@@ -142,10 +151,13 @@
       gap: 20px;
       justify-content: center;
    }
-   .portfolio__projects {
-      flex-direction: column;
-      align-items: center;
-      row-gap: 25px;
+   .portfolio {
+      padding-bottom: 65px;
+      &__projects {
+         flex-direction: column;
+         align-items: center;
+         row-gap: 25px;
+      }
    }
 }
 @media (max-width: $level_5) {
@@ -170,6 +182,7 @@
          margin-top: 55px;
          display: block;
          text-align: center;
+         padding-bottom: 60px;
       }
       &__h1 {
          font-size: 50px;
@@ -302,7 +315,6 @@
    .portfolio {
       &__project {
          width: 345px;
-
          &-width {
             height: 330px;
          }
@@ -319,6 +331,5 @@
       .scrin-height {
          height: 100%;
       }
-      
    }
 }

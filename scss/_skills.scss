@@ -8,7 +8,8 @@
       #ddd7ec1a 90%,
       #f9f8e90a 100%
    );
-   padding-bottom: 100px;
+   padding-bottom: 20px;
+
    &__block {
       width: 1110px;
       min-height: 343px;
@@ -28,7 +29,7 @@
    &__wrapp {
       display: block;
       width: 2230px;
-      margin-top: 50px;
+      margin-top: 20px;
       position: relative;
       left: 0;
       transition: 0.5s linear;
