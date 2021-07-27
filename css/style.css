@@ -1115,7 +1115,7 @@ body {
     width: 160px;
     height: 100%;
   }
-  .portfolio__scrin {
+  .portfolio .scrin-height {
     height: 100%;
   }
 }
