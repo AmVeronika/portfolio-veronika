@@ -11,7 +11,7 @@ class AboutImgsSection {
    }
    render() {//Вывод первых 5ти картинок
       this.aboutImgsOnPage.forEach((img, indx) => {
-         this.aboutImgs += `<img class="about__wrapp-pic about__wrapp-img about${indx}" src="img/about/about-img-${img}.png" alt="">`;
+         this.aboutImgs += `<img class="about__wrapp-pic about__wrapp-img about${indx}" src="img/about/about-img-${img}.png" alt="My hobbi">`;
       })
       this.abouImgsBlock.insertAdjacentHTML('beforeend', this.aboutImgs);
    }
@@ -71,6 +71,60 @@ aboutImgsSection.changeImgs();
 //    return +Math.floor(Math.random() * num);
 // }
 
+//---------------------------------------------------------------------------
+//----------------------ВЫВОД РАБОТ ПОРТФОЛИО--------------------------
+//---------------------------------------------------------------------------
+
+class PortfolioItem {
+   constructor() {
+      this.numProject = [0, 1];
+      this.portfolioItems = '';
+      this.portfolioWrapp = document.querySelector('.portfolio__projects');
+      this.switchItem = document.querySelectorAll('.portfolio__radio');
+   }
+   
+   renderPortfolioItem() {
+      this.numProject.forEach((num) => {
+         this.portfolioItems += `  <a class="portfolio__project portfolio__project-width pojnum-${num}" href="#">
+                                 <div class="portfolio__img1">
+                                    <img class="portfolio__scrin" src="img/portfolio/pr-${num}-1.PNG" alt="Project promo">
+                                 </div>
+                                 <div class="portfolio__img2">
+                                    <img class="portfolio__scrin scrin-height" src="img/portfolio/pr-${num}-2.PNG" alt="Project promo">
+                                 </div>
+                               </a>`
+      })
+      this.portfolioWrapp.insertAdjacentHTML('beforeend', this.portfolioItems)
+   }
+
+   switchProjects() {//Переключатель работ
+      for (let i = 0; i < this.switchItem.length; i++) {//Перебор радиокнопок
+         this.switchItem[i].onchange = () => {
+            if (this.switchItem[i].checked) {//Если статус кнопки чекед
+               switch (this.switchItem[i].value) {//Если значение кнопки...
+                  case 'pos-0':
+                     this.portfolioItems = '';
+                     this.portfolioWrapp.innerHTML = '';
+                     this.numProject.splice(0, 2, 0, 1);
+                     this.renderPortfolioItem();
+                     break;
+                  case 'pos-1':
+                     this.portfolioItems = '';
+                     this.portfolioWrapp.innerHTML = '';
+                     this.numProject.splice(0, 2, 2, 3);
+                     this.renderPortfolioItem();
+                     break;
+               }
+            }
+         }
+      }
+   }
+}
+const portfolioItem = new PortfolioItem;
+portfolioItem.renderPortfolioItem();
+portfolioItem.switchProjects();
+
+
 
 //---------------------------------------------------------------------------
 //----------------------ОTРИСОВКА СКИЛОВ В БЛОКЕ НАВЫКИ----------------------
@@ -84,7 +138,7 @@ class SkillsItem { //Отрисовка Скила в контейнере
    renderSkillItem() {
       return `
                <div class="skills__wrapp-item skills__wrapp-item-${this.effect}">
-                  <img class="skills__wrapp-img" src="img/skill/skill-${this.id}.svg" alt="">
+                  <img class="skills__wrapp-img" src="img/skill/skill-${this.id}.svg" alt="Skill - ${this.name}">
                   <h4 class="textbig skills__wrapp-textbig">${this.name}</h4>
                </div>`
    }

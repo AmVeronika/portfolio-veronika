@@ -105,6 +105,9 @@
    }
 }
 @media (hover: none) and (pointer: coarse) {
+   .about__wrapp-pic {
+      filter: none;
+   }
    .skills__block-gif {
       display: none !important;
    }

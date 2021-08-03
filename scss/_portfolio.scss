@@ -37,7 +37,7 @@
    }
    &__project-width {
       height: 427px;
-      width: 540px;
+      width: 500px;
    }
    &__img1 {
       width: 340px;
@@ -51,7 +51,7 @@
       width: 214px;
       height: 427px;
       position: absolute;
-      left: 308px;
+      left: 281px;
    }
    &__scrin {
       max-width: 100%;
@@ -69,4 +69,25 @@
       bottom: -10px;
       background: $violet;
    }
+}
+.portfolio__switch {
+   display: flex;
+   margin: 25px auto 0;
+   width: 65px;
+   justify-content: space-evenly;
+   position: relative;
+}
+
+.portfolio__radio-style {
+   cursor: pointer;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   border: 3px solid #8643dca3;
+}
+.portfolio__radio {
+   display: none;
+}
+.portfolio__radio:checked + .portfolio__radio-style {
+   background: #e66778;
 }
