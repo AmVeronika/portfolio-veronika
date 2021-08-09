@@ -48,9 +48,16 @@
    }
 }
 .bounce {
-      position: absolute;
-      top: -120px;
-      left: -85px;
-      width: 600px;
-      filter: drop-shadow(0 0 20px rgba(75, 0, 130, 0.5));
-   }
+   position: absolute;
+   top: -120px;
+   left: -85px;
+   width: 600px;
+   filter: drop-shadow(0 0 20px rgba(75, 0, 130, 0.5));
+}
+.parallax {
+   position: absolute;
+    top: -131px;
+    left: -103px;
+    width: 704px;
+    z-index: 5;
+}

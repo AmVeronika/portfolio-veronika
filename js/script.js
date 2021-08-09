@@ -1,4 +1,20 @@
 //---------------------------------------------------------------------------
+//----------------------ВЫВОД SVG В ШАПКЕ (ПАРАЛАКС)-------------------------
+//---------------------------------------------------------------------------
+let parallaxElement = document.querySelectorAll('.parallax');
+document.onmousemove = function (event) {
+   const x = event.pageX / window.innerWidth;
+   const y = event.pageY / window.innerHeight;
+   console.log(x * 0);
+   
+   parallaxElement[0].style.transform = 'translate('+ -x * 30 + 'px, ' + -y * 30 + 'px)';
+   parallaxElement[1].style.transform = 'translate('+ x * 30 + 'px, ' + y * 30 + 'px)';
+   parallaxElement[2].style.transform = 'translate('+ -x * 20 + 'px, ' + y * 20 + 'px)';
+
+}
+
+
+//---------------------------------------------------------------------------
 //----------------------ВЫВОД ХОББИ В БЛОКЕ ОБО МНЕ--------------------------
 //---------------------------------------------------------------------------
 class AboutImgsSection {
@@ -82,7 +98,7 @@ class PortfolioItem {
       this.portfolioWrapp = document.querySelector('.portfolio__projects');
       this.switchItem = document.querySelectorAll('.portfolio__radio');
    }
-   
+
    renderPortfolioItem() {
       this.numProject.forEach((num) => {
          this.portfolioItems += `  <a class="portfolio__project portfolio__project-width pojnum-${num}" href="#">
@@ -279,7 +295,7 @@ skillsWrapp.onmousedown = function (event) {
          newLeft = 0;
       }
       if (newLeft < rightEdge) {
-         newLeft = -1113;
+         newLeft = -1118;
       }
       skillsWrapp.style.left = newLeft + 'px';
    }
