@@ -29,10 +29,18 @@
 
 @media (max-width: $level_2) {
    .header {
+      &__top {
+         margin-top: 40px;
+      }
       &__avatar-bg {
          width: 835px;
          left: -290px;
       }
+   }
+   .parallax {
+      top: -126px;
+      left: -138px;
+      width: 646px;
    }
    .portfolio__projects {
       justify-content: space-around;
@@ -66,6 +74,17 @@
          width: 835px;
          left: -310px;
       }
+   }
+   .parallax-1 {
+      top: -194px;
+      left: -70px;
+   }
+   .parallax-2 {
+      top: -156px;
+      left: -186px;
+   }
+   .parallax-3 {
+      display: none;
    }
    .bounce {
       width: 520px;
@@ -132,6 +151,13 @@
          margin-left: 5px;
       }
    }
+   .parallax-1 {
+      top: -130px;
+      left: -132px;
+   }
+   .parallax-2 {
+      left: -202px;
+   }
    .bounce {
       width: 100%;
       right: 0;
@@ -157,7 +183,7 @@
       min-height: 343px;
       width: 100%;
    }
-  
+
    .portfolio {
       padding-bottom: 65px;
       &__projects {
@@ -211,6 +237,9 @@
             top: 285px;
          }
       }
+   }
+   .parallax {
+      display: none;
    }
    .bounce {
       width: 100%;
