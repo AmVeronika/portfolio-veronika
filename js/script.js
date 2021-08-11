@@ -6,10 +6,10 @@ document.onmousemove = function (event) {
    const x = event.pageX / window.innerWidth;
    const y = event.pageY / window.innerHeight;
    console.log(x * 0);
-   
-   parallaxElement[0].style.transform = 'translate('+ -x * 30 + 'px, ' + -y * 30 + 'px)';
-   parallaxElement[1].style.transform = 'translate('+ x * 30 + 'px, ' + y * 30 + 'px)';
-   parallaxElement[2].style.transform = 'translate('+ -x * 20 + 'px, ' + y * 20 + 'px)';
+
+   parallaxElement[0].style.transform = 'translate(' + -x * 30 + 'px, ' + -y * 30 + 'px)';
+   parallaxElement[1].style.transform = 'translate(' + x * 30 + 'px, ' + y * 30 + 'px)';
+   parallaxElement[2].style.transform = 'translate(' + -x * 20 + 'px, ' + y * 20 + 'px)';
 
 }
 
@@ -66,18 +66,20 @@ class PortfolioItem {
       this.portfolioItems = '';
       this.portfolioWrapp = document.querySelector('.portfolio__projects');
       this.switchItem = document.querySelectorAll('.portfolio__radio');
+      this.arrLink = ['geekbrains-work', 'Templates', 'maket-blitz', 'maket-the_brand'];
    }
 
    renderPortfolioItem() {
       this.numProject.forEach((num) => {
-         this.portfolioItems += `  <a class="portfolio__project portfolio__project-width pojnum-${num}" href="#">
-                                 <div class="portfolio__img1">
-                                    <img class="portfolio__scrin" src="img/portfolio/pr-${num}-1.PNG" alt="Project promo">
-                                 </div>
-                                 <div class="portfolio__img2">
-                                    <img class="portfolio__scrin scrin-height" src="img/portfolio/pr-${num}-2.PNG" alt="Project promo">
-                                 </div>
-                               </a>`
+         this.portfolioItems += `  <a class="portfolio__project portfolio__project-width pojnum-${num}" target="_blank" href="https://amveronika.github.io/${this.arrLink[num]}/">
+                              <div class="portfolio__img1">
+                                 <img class="portfolio__scrin" src="img/portfolio/pr-${num}-1.PNG" alt="Project promo">
+                              </div>
+                              <div class="portfolio__img2">
+                                 <img class="portfolio__scrin scrin-height" src="img/portfolio/pr-${num}-2.PNG" alt="Project promo">
+                              </div>
+                            </a>`
+
       })
       this.portfolioWrapp.insertAdjacentHTML('beforeend', this.portfolioItems)
    }
