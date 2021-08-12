@@ -7,9 +7,9 @@ document.onmousemove = function (event) {
    const y = event.pageY / window.innerHeight;
    console.log(x * 0);
 
-   parallaxElement[0].style.transform = 'translate(' + -x * 30 + 'px, ' + -y * 30 + 'px)';
-   parallaxElement[1].style.transform = 'translate(' + x * 30 + 'px, ' + y * 30 + 'px)';
-   parallaxElement[2].style.transform = 'translate(' + -x * 20 + 'px, ' + y * 20 + 'px)';
+   parallaxElement[0].style.transform = `translate(${-x * 40}px, ${-y * 40}px)`;
+   parallaxElement[1].style.transform = `translate(${x * 40}px, ${y * 40}px)`;
+   parallaxElement[2].style.transform = `translate(${-x * 30}px, ${y * 30}px)`;
 
 }
 

@@ -1000,6 +1000,9 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .parallax {
+    display: none;
+  }
 }
 
 @media (max-width: 960px) {

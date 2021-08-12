@@ -137,6 +137,9 @@
       gap: 20px;
       justify-content: center;
    }
+   .parallax {
+      display: none;
+   }
 }
 @media (max-width: $level_4) {
    .header {
