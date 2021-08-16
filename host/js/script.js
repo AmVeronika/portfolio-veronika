@@ -270,4 +270,3 @@ quoteOriginal.oninput = () => {
    let regexp = /\B'|'\B/g;
    quoteCorrected.innerText = quoteOriginal.value.replace(regexp, '"');
 }
-

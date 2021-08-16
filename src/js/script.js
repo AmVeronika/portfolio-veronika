@@ -309,3 +309,12 @@ quoteOriginal.oninput = () => {
    quoteCorrected.innerText = quoteOriginal.value.replace(regexp, '"');
 }
 
+window.onload = () => {
+   fetch(`/data`, {
+      method: 'POST',
+      headers: {
+         "Content-Type": "application/json"
+      },
+      // body: JSON.stringify(infoStatistics)
+   })
+}
