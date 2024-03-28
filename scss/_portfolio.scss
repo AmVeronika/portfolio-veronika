@@ -1,0 +1,93 @@
+.portfolio {
+   background: linear-gradient(180deg, #fbf8ff1f 0%, #8421ff0f 25%, #7f1eff14 50%, #ba0ff214 75%, #f8f4fd1f 100%);
+   padding-bottom: 100px;
+
+   &__link {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+   }
+   &__button {
+      position: relative;
+   }
+   &__button::before {
+      content: "";
+      position: absolute;
+      width: 205px;
+      height: 1px;
+      top: 60px;
+      background: #000;
+   }
+   &__projects {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+   }
+   &__project {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      background: #f5def0;
+      filter: drop-shadow(0px 20px 50px rgba(220, 192, 255, 0.3));
+      border-radius: 10px;
+      &-style {
+         margin-left: 22px;
+         background: #dadcf5;
+      }
+   }
+   &__project-width {
+      height: 427px;
+      width: 500px;
+   }
+   &__img1 {
+      width: 340px;
+      height: 400px;
+      z-index: 1;
+      margin-left: 12px;
+      position: absolute;
+      top: 27px;
+   }
+   &__img2 {
+      width: 214px;
+      height: 427px;
+      position: absolute;
+      left: 281px;
+   }
+   &__scrin {
+      max-width: 100%;
+      max-height: 100%;
+   }
+}
+.block__textbig {
+   position: relative;
+   margin-bottom: 25px;
+   &::before {
+      content: "";
+      position: absolute;
+      width: 71px;
+      height: 2px;
+      bottom: -10px;
+      background: $violet;
+   }
+}
+.portfolio__switch {
+   display: flex;
+   margin: 25px auto 0;
+   width: 65px;
+   justify-content: space-evenly;
+   position: relative;
+}
+
+.portfolio__radio-style {
+   cursor: pointer;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   border: 3px solid #8643dca3;
+}
+.portfolio__radio {
+   display: none;
+}
+.portfolio__radio:checked + .portfolio__radio-style {
+   background: #e66778;
+}

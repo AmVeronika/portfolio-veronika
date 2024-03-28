@@ -1,0 +1,210 @@
+//COLORS
+$violet: #8643dc;
+$topaz: #25202f;
+$grape: #47444e;
+$mobster: #636066;
+$stormgray: #7e7f86;
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&display=swap");
+
+$fontfamily: "Comfortaa", cursive;
+
+$fontweight: (
+   bold: 700,
+   medium: 500,
+   regular: 400,
+);
+
+$fontsize: (
+   h1: 60px,
+   h2: 36px,
+   h3: 24px,
+   extratext: 20px,
+   textbig: 18px,
+   text: 16px,
+);
+
+$texttransform: (
+   none: none,
+   cap: capitalize,
+   upper: uppercase,
+);
+
+// Nixit for font style
+@mixin fontstyle($fw, $fs, $tt) {
+   @if map-has-key($fontweight, $fw) {
+      font-weight: #{map-get($fontweight, $fw)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fw}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($fontsize, $fs) {
+      font-size: #{map-get($fontsize, $fs)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fs}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($texttransform, $tt) {
+      text-transform: #{map-get($texttransform, $tt)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$tt}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+}
+
+// MEDIA
+$level_1: 1380px;
+$level_2: 1260px;
+$level_3: 1125px;
+$level_4: 960px;
+$level_5: 850px;
+$level_6: 730px;
+$level_7: 580px;
+$level_8: 450px;
+$level_9: 375px;
+
+// WIDTH
+$desktopwidth: 1110px;
+
+html{
+   scroll-behavior: smooth;
+}
+
+
+
+.container {
+   max-width: $desktopwidth;
+   margin: 0 auto;
+   padding: 0 15px;
+   width: 100%;
+   @media (max-width: $level_7) {
+      padding: 0 8px;
+   }
+}
+
+section,
+article,
+header,
+footer,
+aside {
+   display: block;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   font-family: $fontfamily;
+   min-width: $level_9;
+   min-height: 100vh;
+   cursor: url(../img/cursor.svg), auto;
+}
+
+.main {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   flex-grow: 1;
+}
+
+.h1 {
+   @include fontstyle(bold, h1, cap);
+   line-height: 72px;
+   color: $topaz;
+}
+.h2 {
+   @include fontstyle(bold, h2, none);
+   line-height: 47px;
+   color: $topaz;
+}
+.h3 {
+   @include fontstyle(medium, h3, none);
+   line-height: 32px;
+   color: $topaz;
+}
+.extratext {
+   @include fontstyle(regular, extratext, none);
+   line-height: 27px;
+   color: $stormgray;
+}
+.textbig {
+   @include fontstyle(regular, textbig, n);
+   line-height: 23px;
+   color: $violet;
+}
+.text {
+   @include fontstyle(medium, text, none);
+   line-height: 32px;
+   color: $mobster;
+}
+
+.hr-h2 {
+   display: inline-block;
+   &::after {
+      position: relative;
+      bottom: 21px;
+      left: 0;
+      content: "";
+      display: block;
+      height: 10px;
+      background: rgba(73, 69, 255, 0.2);
+   }
+}
+.btn-1 {
+   background: linear-gradient(180deg, #716fff 0%, #4945ff 100%);
+   border-radius: 10px;
+   padding: 17px 57px;
+   color: black;
+}
+
+// HOVER
+.nav-active {
+   color: #000;
+   font-weight: 500;
+}
+.header__nav-item:hover {
+   color: #000;
+   font-weight: 500;
+}
+.header__talk:hover {
+   color: #25202f;
+   background: #fc46b2;
+}
+.about__wrapp-pic:hover {
+   transition: 0.2s;
+   filter: none;
+}
+.contacts-h2:active {
+   color: #fc46b2;
+}
+.contacts-h2:active .contacts__arrow {
+   fill: #ffdff3;
+}
+.contacts-h2:hover .contacts__arrow-left {
+   animation: arrow1 0.6s linear infinite;
+}
+.contacts-h2:hover .contacts__arrow-right {
+   animation: arrow2 0.6s linear infinite;
+}
+@keyframes arrow1 {
+   from {
+      transform: translateX(-3px);
+   }
+   to {
+      transform: translateX(1px);
+   }
+}
+@keyframes arrow2 {
+   from {
+      transform: translateX(3px);
+   }
+   to {
+      transform: translateX(-1px);
+   }
+}
+.contacts__wrapp-link:hover .contacts__wrapp-ikon {
+   fill: #000;
+}
+
+
